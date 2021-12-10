@@ -1,9 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const kf = keyframes`
+    from{
+        margin-top: -5%;
+        opacity: 0;
+    }
+    to{
+        margin-top: 0;
+        opacity: 1;
+    }
+`
 
 const StyledInfo = styled.div`
     background-color: rgba(255,255,255, 0.7);
-    border-color: 1px solid red;
+
+    opacity: 0;
+    animation: ${kf} 0.3s ease-in-out forwards;
 `
 
 export default function CharacterInfo(props){

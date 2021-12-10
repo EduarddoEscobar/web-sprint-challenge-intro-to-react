@@ -7,15 +7,14 @@ const StyledDiv = styled.div`
     
     background: rgba(255,255,255, 0.5);
     border: 1px solid white;
-    
     width: 40%;
-    
 
     div{
         width: 100%;
         display: flex;
         justify-content: space-between;
-        font-size: 1.6rem;
+        font-size:1rem;
+        margin-top: 2%;
     }
 
     &:hover{
@@ -28,9 +27,9 @@ export default function CharacterDisplay(props){
 
     return(
         <StyledDiv onClick={toggleOpen}>
-            <div>
-                {character.name}
-                <button>{open ? '🔺' : '🔻'}</button>
+            <div className="CharBar">
+                <h2>{character.name}</h2>
+                <p>{open ? '🔺' : '🔻'}</p>
             </div>
             {open && <CharacterInfo character={character} />}
             
