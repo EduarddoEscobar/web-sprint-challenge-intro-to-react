@@ -27,7 +27,7 @@ export default function CharacterDisplay(props){
 
     return(
         <StyledDiv onClick={toggleOpen}>
-            <div className="CharBar">
+            <div>
                 <h2>{character.name}</h2>
                 <p>{open ? '🔺' : '🔻'}</p>
             </div>
