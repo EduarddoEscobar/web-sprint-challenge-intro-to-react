@@ -1,13 +1,11 @@
 // Write your Character component here
 import React, {useState, useEffect} from "react";
 import styled from 'styled-components';
+import CharacterDisplay from "./CharacterDisplay";
 
 const StyledDiv = styled.div`
-    margin: auto;
     display: flex;
-    width: 40%;
-    justify-content: space-between;
-    font-size: 1.4rem;
+    justify-content: center;
 `
 
 export default function Character(props){
@@ -21,9 +19,7 @@ export default function Character(props){
 
     return(
         <StyledDiv>
-
-            {character.name}
-            <button onClick={toggleOpen}>{open ? '🔺' : '🔻'}</button>
+            <CharacterDisplay name={character.name} open={open} toggleOpen={toggleOpen}/>
         </StyledDiv>
     )
 }
