@@ -19,7 +19,7 @@ export default function Character(props){
 
     return(
         <StyledDiv>
-            <CharacterDisplay name={character.name} open={open} toggleOpen={toggleOpen}/>
+            <CharacterDisplay character={character} open={open} toggleOpen={toggleOpen}/>
         </StyledDiv>
     )
 }

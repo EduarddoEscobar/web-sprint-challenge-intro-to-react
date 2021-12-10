@@ -16,7 +16,6 @@ const App = () => {
 
   useEffect(() => {
     axios.get('https://swapi.dev/api/people').then(resp => {
-      console.log(resp.data);
       setCharacters(resp.data);
     }).catch(error => console.error(error));
   }, [])
